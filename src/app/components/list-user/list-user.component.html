@@ -1,0 +1,33 @@
+<table class="table zero-configuration table-striped" >
+  
+    <thead>
+        <tr>   
+          <th>Email</th>                                  
+          <th>Nom</th>
+          <th>Prenom</th>
+          <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let u of users; index as i">
+
+        <td class="product-category" >{{u.email}}</td> 
+        <td class="product-category">{{u.nom}}</td>
+        <td class="product-category">{{u.prenom}}</td>
+        <td class="product-action">
+          <div class="dropdown">
+         
+
+            <a class="btn btn-danger" (click)="deletePopup(u.id)">Supprimer</a>
+          
+         </div>
+         
+         </td>
+
+
+     
+      </tr>
+  
+             </tbody>                            
+    
+</table>
